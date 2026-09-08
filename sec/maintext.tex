@@ -7,10 +7,18 @@ Ultra long video understanding (ULVU)
 
 \section{VideoSQL}
 \subsection{Index Building}
+We used the same index sturcture as MAGIC-Video \cite{li_bridging_2026}, which includes video captions, entities, visual clips, event chain, etc. Readers can referenced to MAGIC-Video for more details. However, the original pipeline is complext and involving many slow stages like OpenIE. We modified the indexing process such that an VLM (Qwen 3.8) to directly output these information based on the input. 
+
 \subsection{Agentic SQL Queries}
+
+
 \subsection{Trainable Skills}
+
 
 \section{Evaluations}
 \subsection{Datasets}
-We evaluated our method on the two most popular datasets in ULVU: EgoLifeQA \cite{yang_egolife_2026} and MM-Lifelong \cite{chen_multimodal_2026}. EgoLifeQA contains multiple-choice questions, and we argue that this does not mimic realistic usage. We find that agents could brute-force verify each option and artificially boost the accuracy.
+We used two most popular ULVU datasets in the paper: EgoLifeQA \cite{yang_egolife_2026} and MM-Lifelong \cite{chen_multimodal_2026}. EgoLifeQA uses multiple-choice questions (MCQ) while MM-Lifelong uses open QA. EgoLifeQA contains one week of recording in the same setting while MM-Lifelong has 3 different settings (day, week, and month) each with its own video. The MM-Lifelong week subset has the same video as EgoLifeQA. We argue that MCQ does not reflect realistic usage since most questions asked by users in real world are open. Additionally, agents can brute-force verify each option to artificially boost accuracy. We therefore reformulated EgoLifeQA into open QA questions (Open-EgoLifeQA) similar to MM-Lifelong and evaluated both using LLM-as-judge for semantic comparison between the ground-truth and predicted answers. To compare with prior work, we used the Jack view from EgoLifeQA. We evaluated our un-trained VideoSQL on both Open-EgoLifeQA and MM-Lifelong validation set. 
+
+To train the VideoSQL Skill, we need to select a independent training set. Ego-R1 Data \cite{tian_egor1_2025} is a training set build on top of EgoLifeQA and authors of Ego-R1 trained their method on this dataset and then tested on EgoLifeQA. MM-Lifelong also has a training split as well. However, these training sets overlap with their corresponding validation/testing sets at the video level. While no questions are leaked, we argue that sharing videos could still inflate performance, or at least fail to test the model's ability for cross-domain generalization. To address these, we trained out Skill on a mixture of MM-Lifelong day-long and week-long subset and EgoLifeQA and evaluated on the most challenging MM-Lifelong month-long subset.  
+
 \subsection{Baselines}

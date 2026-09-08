@@ -4504,6 +4504,24 @@
   keywords = {Computer Science - Computer Vision and Pattern Recognition}
 }
 
+@misc{li_bridging_2026,
+  title = {Bridging {{Modalities}}, {{Spanning Time}}: {{Structured Memory}} for {{Ultra-Long Agentic Video Reasoning}}},
+  shorttitle = {Bridging {{Modalities}}, {{Spanning Time}}},
+  author = {Li, Jiazheng and Wu, Chi-Hao and Liu, Yunze and Ding, Kaize and Li, Jundong and Zhang, Chuxu},
+  year = 2026,
+  month = may,
+  number = {arXiv:2605.08271},
+  eprint = {2605.08271},
+  primaryclass = {cs.CV},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2605.08271},
+  urldate = {2026-09-08},
+  abstract = {Understanding ultra-long videos such as egocentric recordings, live streams, or surveillance footage spanning days to weeks, remains a challenge. For current multimodal LLMs: even with million-token context windows, frame budgets cover only tens of minutes of densely sampled video, and most evidence is discarded before inference begins. Memory-augmented and agentic approaches help with scale, but their retrieval remains fragmented across modalities and lacks long-range narrative summaries that span days or weeks. We propose \textbackslash textbf\textbraceleft MAGIC-Video\textbraceright, a training-free framework built around a multimodal memory graph with interleaved narrative chain: the graph unifies episodic, semantic, and visual content through six typed edges and supports cross-modal retrieval, while the chain distils long-horizon entity biographies and recurring activity events. At inference time, an agentic loop interleaves graph retrieval with narrative fact injection, covering both the modality and time dimensions of ultra-long video in a single retrieval pipeline. On EgoLifeQA, Ego-R1 and MM-Lifelong, MAGIC-Video consistently outperforms strong general-purpose, long-video, and agentic baselines, with gains of 10.1, 7.4, and 5.9 points over the prior best agentic system on each benchmark. Code is available at https://github.com/lijiazheng0917/MAGIC-video.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computer Vision and Pattern Recognition},
+  file = {/Users/wenqiguo/Zotero/storage/KV82N4A4/Li et al. - 2026 - Bridging Modalities, Spanning Time Structured Memory for Ultra-Long Agentic Video Reasoning.pdf;/Users/wenqiguo/Zotero/storage/HLKQ798T/2605.html}
+}
+
 @article{li_facecloseup_2025,
   title = {{{FaceCloseup}}: {{Enhancing Mobile Facial Authentication}} with {{Perspective Distortion-Based Liveness Detection}}},
   shorttitle = {{{FaceCloseup}}},
@@ -7612,6 +7630,24 @@
   abstract = {Background subtraction (BGS) is a fundamental video processing task which is a key component of many applications. Deep learning-based supervised algorithms achieve very good perforamnce in BGS, however, most of these algorithms are optimized for either a specific video or a group of videos, and their performance decreases dramatically when applied to unseen videos. Recently, several papers addressed this problem and proposed video-agnostic supervised BGS algorithms. However, nearly all of the data augmentations used in these algorithms are limited to the spatial domain and do not account for temporal variations that naturally occur in video data. In this work, we introduce spatio-temporal data augmentations and apply them to one of the leading video-agnostic BGS algorithms, BSUV-Net. We also introduce a new cross-validation training and evaluation strategy for the CDNet-2014 dataset that makes it possible to fairly and easily compare the performance of various video-agnostic supervised BGS algorithms. Our new model trained using the proposed data augmentations, named BSUV-Net 2.0, significantly outperforms state-of-the-art algorithms evaluated on unseen videos of CDNet-2014. We also evaluate the cross-dataset generalization capacity of BSUV-Net 2.0 by training it solely on CDNet-2014 videos and evaluating its performance on LASIESTA dataset. Overall, BSUV-Net 2.0 provides a \textasciitilde 5\% improvement in the F-score over state-of-the-art methods on unseen videos of CDNet-2014 and LASIESTA datasets. Furthermore, we develop a real-time variant of our model, that we call Fast BSUV-Net 2.0, whose performance is close to the state of the art.},
   archiveprefix = {arXiv},
   keywords = {Computer Science - Computer Vision and Pattern Recognition}
+}
+
+@misc{tian_egor1_2025,
+  title = {Ego-{{R1}}: {{Chain-of-Tool-Thought}} for {{Ultra-Long Egocentric Video Reasoning}}},
+  shorttitle = {Ego-{{R1}}},
+  author = {Tian, Shulin and Wang, Ruiqi and Guo, Hongming and Wu, Penghao and Dong, Yuhao and Wang, Xiuying and Yang, Jingkang and Zhang, Hao and Zhu, Hongyuan and Liu, Ziwei},
+  year = 2025,
+  month = jun,
+  number = {arXiv:2506.13654},
+  eprint = {2506.13654},
+  primaryclass = {cs.CV},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2506.13654},
+  urldate = {2026-09-08},
+  abstract = {We introduce Ego-R1, a novel framework for reasoning over ultra-long (i.e., in days and weeks) egocentric videos, which leverages a structured Chain-of-Tool-Thought (CoTT) process, orchestrated by an Ego-R1 Agent trained via reinforcement learning (RL). Inspired by human problem-solving strategies, CoTT decomposes complex reasoning into modular steps, with the RL agent invoking specific tools, one per step, to iteratively and collaboratively answer sub-questions tackling such tasks as temporal retrieval and multi-modal understanding. We design a two-stage training paradigm involving supervised finetuning (SFT) of a pretrained language model using CoTT data and RL to enable our agent to dynamically propose step-by-step tools for long-range reasoning. To facilitate training, we construct a dataset called Ego-R1 Data, which consists of Ego-CoTT-25K for SFT and Ego-QA-4.4K for RL. Furthermore, our Ego-R1 agent is evaluated on a newly curated week-long video QA benchmark, Ego-R1 Bench, which contains human-verified QA pairs from hybrid sources. Extensive results demonstrate that the dynamic, tool-augmented chain-of-thought reasoning by our Ego-R1 Agent can effectively tackle the unique challenges of understanding ultra-long egocentric videos, significantly extending the time coverage from few hours to a week.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computer Vision and Pattern Recognition},
+  file = {/Users/wenqiguo/Zotero/storage/84MVEB7V/Tian et al. - 2025 - Ego-R1 Chain-of-Tool-Thought for Ultra-Long Egocentric Video Reasoning.pdf;/Users/wenqiguo/Zotero/storage/ZZFFKQBX/2506.html}
 }
 
 @misc{timotija_pentagon_2026,

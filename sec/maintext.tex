@@ -6,15 +6,15 @@ Ultra long video understanding (ULVU)
 \subsection{Ultra Long Video Understanding}
 \subsection{Skill Training} 
 
-Training model weights, especilly using reinforcement learning (RL) is expensive, slow, and not portable (you would need to host and run this specific model that might perfome poorly on general tasks). Many recent works began to train the Skill document of agent instead of the model weights, which could be seen as a form of prompt optimization. 
+Training model weights, especially with reinforcement learning (RL), is expensive, slow, and not portable (you would need to host and run this specific model, which might perform poorly on general tasks). Many recent works began to train the agent's Skill document instead of model weights, which can be seen as a form of prompt optimization.
 
-Training-free GRPO \cite{_251008191_} used a similar apporch to original gradient based GRPO \cite{shao_deepseekmath_2024}. A initial experience and a policy model is used to rollout a batch of traces and another LLM is used to compute the semantic advantage of each rollout, anology to the numberitic advantage in original GRPO. These semantic advantages are used to update the experience. 
+Training-free GRPO \cite{_251008191_} uses an approach similar to the original gradient-based GRPO \cite{shao_deepseekmath_2024}. An initial experience and a policy model are used to roll out a batch of traces, and another LLM computes the semantic advantage of each rollout, analogous to the numeric advantage in the original GRPO. These semantic advantages are used to update the experience.
 
-Trace2Skill \cite{ni_trace2skill_2026} used parllel rollout in batches to collect many traces and generate patches for success and failed trace, these patches are then cascadingly merged to the final skill. Compared to training-free GRPO, this can be seen as a form of off line reinforcement learning. 
+Trace2Skill \cite{ni_trace2skill_2026} uses parallel rollouts in batches to collect many traces and generate patches for successful and failed traces. These patches are then merged into the final Skill in sequence. Compared to training-free GRPO, this can be seen as a form of offline reinforcement learning.
 
-SkillOpt \cite{yang_skillopt_2026} treats the skill optimization similar to gradient descent optimization, where editing budget is anlohy to learning rate, gradient direction is analogy to editing directio, etc. They also learn a meta skill to track what kind of edit is helpful using a held out validation set. 
+SkillOpt \cite{yang_skillopt_2026} treats Skill optimization similarly to gradient descent, where the editing budget is analogous to the learning rate, the gradient direction is analogous to the editing direction, etc. It also learns a meta-skill to track what kind of edit is helpful using a held-out validation set.
 
-SkillCAT \cite{chen_skillcat_2026} used a DPO-style training. It samples two paired rollout: success one ($r^+$) and failed one ($r^-$). Then it analysis the two traces and find the point where they diverges and generate the patch contrastively. The patch is then verified if it actually helps the agent, similar to the gate in SkillOpt and merged if it overturn a failure into success or maintain a success. However, in many cases, the two traces are completely independent (no shared prefix beyond the prompt) or the diverge point does not impact the result.  
+SkillCAT \cite{chen_skillcat_2026} uses DPO-style training. It samples two paired rollouts: a successful one ($r^+$) and a failed one ($r^-$). It then analyzes the two traces, finds the point where they diverge, and generates a patch contrastively. The patch is then verified to see whether it helps the agent, similar to the gate in SkillOpt, and is merged if it turns a failure into a success or maintains a success. However, in many cases, the two traces are completely independent (with no shared prefix beyond the prompt), or the divergence point does not affect the result.
 
 \section{VideoSQL}
 \subsection{Index Building}

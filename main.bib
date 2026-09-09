@@ -11,6 +11,13 @@
   file = {/Users/wenqiguo/Zotero/storage/3TRTP3KA/2311.html}
 }
 
+@misc{_251008191_,
+  title = {[2510.08191] {{Training-Free Group Relative Policy Optimization}}},
+  urldate = {2026-09-08},
+  howpublished = {https://arxiv.org/abs/2510.08191},
+  file = {/Users/wenqiguo/Zotero/storage/Y3FST79A/2510.html}
+}
+
 @misc{_251119009_,
   title = {[2511.19009] {{Understanding}} and {{Mitigating Over-refusal}} for {{Large Language Models}} via {{Safety Representation}}},
   urldate = {2026-04-28},
@@ -57,6 +64,17 @@
   howpublished = {https://code.claude.com/docs/en/agent-sdk/overview},
   langid = {english},
   file = {/Users/wenqiguo/Zotero/storage/5U2KSUFG/overview.html}
+}
+
+@misc{_agentskills_,
+  title = {Agentskills/Agentskills: {{Specification}} and Documentation for {{Agent Skills}}},
+  shorttitle = {Agentskills/Agentskills},
+  journal = {GitHub},
+  urldate = {2026-09-08},
+  abstract = {Specification and documentation for Agent Skills. Contribute to agentskills/agentskills development by creating an account on GitHub.},
+  howpublished = {https://github.com/agentskills/agentskills},
+  langid = {english},
+  file = {/Users/wenqiguo/Zotero/storage/KM99DXEW/agentskills.html}
 }
 
 @misc{_ai_2026,
@@ -1964,6 +1982,20 @@
   abstract = {Recent advances in multimodal generative models have unlocked photorealistic, instruction-aligned image generation, yet leading systems like GPT-4o-Image remain proprietary and inaccessible. To democratize these capabilities, we present ShareGPT-4o-Image, the first dataset comprising 45K text-to-image and 46K text-and-image-to-image data, all synthesized using GPT-4o's image generation capabilities for distilling its advanced image generation abilities. Leveraging this dataset, we develop Janus-4o, a multimodal large language model capable of both text-to-image and text-and-image-to-image generation. Janus-4o not only significantly improves text-to-image generation over its predecessor, Janus-Pro, but also newly supports text-and-image-to-image generation. Notably, it achieves impressive performance in text-and-image-to-image generation from scratch, using only 91K synthetic samples and 6 hours of training on an 8 A800-GPU machine. We hope the release of ShareGPT-4o-Image and Janus-4o will foster open research in photorealistic, instruction-aligned image generation.},
   archiveprefix = {arXiv},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning}
+}
+
+@misc{chen_skillcat_2026,
+  title = {{{SkillCAT}}: {{Contrastive}}, {{Assessment-Augmented}} and {{Topology-AwareSkill Self-Evolution}} for {{LLM Agents}}},
+  shorttitle = {{{SkillCAT}}},
+  author = {Chen, Kunfeng and Zhong, Qihuang and Liu, Juhua and Du, Bo},
+  year = 2026,
+  month = jun,
+  journal = {arXiv.org},
+  urldate = {2026-09-09},
+  abstract = {Skill self-evolution methods for LLM agents aim to turn execution trajectories into reusable skill documents. However, current pipelines typically derive skill patches from a single trajectory per task, merge them indiscriminately, and load the entire skill corpus during inference. These choices lead to unreliable evidence extraction, the accumulation of low-quality or even harmful skill edits, and inefficient use of context due to irrelevant or conflicting skill content. We propose SkillCAT, a framework that decomposes this process into three stages. (1) Contrastive Causal Extraction (CCE) samples multiple trajectories per task and contrasts same-task success/failure pairs to find the evidence that explains outcome differences. (2) Assessment-Augmented Evolution (AAE) replays each candidate patch on source-task clones, retains only those that do not damage task outcomes, and then merges the retained patches hierarchically. (3) Topology-Aware Task Execution (TTE) compiles the evolved skills into routable sub-skill topologies, so that inference loads only task-relevant capability nodes. We evaluate SkillCAT on widely-used agent benchmarks, including SpreadsheetBench, WikiTableQuestions, and DocVQA, and further assess cross-model and out-of-distribution generalization. Across these settings, SkillCAT improves the average score over the initial skill by up to 49.69\%, demonstrating reliable and effective skill evolution.},
+  howpublished = {https://arxiv.org/abs/2606.13317v2},
+  langid = {english},
+  file = {/Users/wenqiguo/Zotero/storage/6RJZSP2I/Chen et al. - 2026 - SkillCAT Contrastive, Assessment-Augmented and Topology-AwareSkill Self-Evolution for LLM Agents.pdf}
 }
 
 @misc{chen_yesmen_2025,
@@ -5706,6 +5738,24 @@
   file = {/Users/wenqiguo/Zotero/storage/EVSNAXLL/Nguyen - 2024 - Value Capture.pdf}
 }
 
+@misc{ni_trace2skill_2026,
+  title = {{{Trace2Skill}}: {{Distill Trajectory-Local Lessons}} into {{Transferable Agent Skills}}},
+  shorttitle = {{{Trace2Skill}}},
+  author = {Ni, Jingwei and Liu, Yihao and Liu, Xinpeng and Sun, Yutao and Zhou, Mengyu and Cheng, Pengyu and Wang, Dexin and Zhao, Erchao and Jiang, Xiaoxi and Jiang, Guanjun},
+  year = 2026,
+  month = jun,
+  number = {arXiv:2603.25158},
+  eprint = {2603.25158},
+  primaryclass = {cs.AI},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2603.25158},
+  urldate = {2026-09-08},
+  abstract = {Large Language Model (LLM) agents increasingly rely on domain-specific skills, yet manually authoring such skills does not scale, and skills generated purely from parametric knowledge often miss critical operational pitfalls. We introduce Trace2Skill, a framework that consolidates broad execution trajectories in parallel into a unified skill directory through inductive reasoning over agent experience. Trace2Skill supports both deepening existing human-written skills and creating useful skills from weak LLM-generated drafts. Experiments demonstrate the effectiveness of Trace2Skill across diverse domains, including office workflows, math reasoning, and vision QA. Importantly, the evolved skills are not merely memorized artifacts of the trajectories used to create them: they often transfer across model scales, across model families, and to out-of-distribution settings. For example, skills evolved from Qwen3.5-35B trajectories improve a Qwen3.5-122B agent by up to \$57.65\$ percentage points on WikiTableQuestions. Further analyses show that Trace2Skill outperforms sequential skill editing and ReasoningBank-style retrieval memories, compresses recurring failures and workarounds into standard operating procedures (SoPs), and yields portable skills that can be reused without parameter updates or test-time retrieval.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Artificial Intelligence},
+  file = {/Users/wenqiguo/Zotero/storage/BN79VEXL/Ni et al. - 2026 - Trace2Skill Distill Trajectory-Local Lessons into Transferable Agent Skills.pdf;/Users/wenqiguo/Zotero/storage/FQQS9FR5/2603.html}
+}
+
 @misc{oh_vision_2026,
   title = {Do {{Vision Encoders Truly Explain Object Hallucination}}?: {{Mitigating Object Hallucination}} via {{Simple Fine-Grained CLIPScore}}},
   shorttitle = {Do {{Vision Encoders Truly Explain Object Hallucination}}?},
@@ -8828,6 +8878,24 @@
   archiveprefix = {arXiv},
   keywords = {Computer Science - Computer Vision and Pattern Recognition},
   file = {/Users/wenqiguo/Zotero/storage/JD9VAWJL/Yang et al. - 2025 - R1-Onevision Advancing Generalized Multimodal Reasoning through Cross-Modal Formalization.pdf;/Users/wenqiguo/Zotero/storage/R9BHLKKP/2503.html}
+}
+
+@misc{yang_skillopt_2026,
+  title = {{{SkillOpt}}: {{Executive Strategy}} for {{Self-Evolving Agent Skills}}},
+  shorttitle = {{{SkillOpt}}},
+  author = {Yang, Yifan and Gong, Ziyang and Huang, Weiquan and Yang, Qihao and Zhou, Ziwei and Huang, Zisu and Li, Yan and Gao, Xuemei and Dai, Qi and Liu, Bei and Qiu, Kai and Yang, Yuqing and Chen, Dongdong and Yang, Xue and Luo, Chong},
+  year = 2026,
+  month = may,
+  number = {arXiv:2605.23904},
+  eprint = {2605.23904},
+  primaryclass = {cs.AI},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2605.23904},
+  urldate = {2026-09-09},
+  abstract = {Agent skills today are hand-crafted, generated one-shot, or evolved through loosely controlled self-revision, none of which behaves like a deep-learning optimizer for the skill, and none of which reliably improves over its starting point under feedback. We argue the skill should instead be trained as the external state of a frozen agent, with the same discipline that makes weight-space optimization reproducible. SkillOpt is, to our knowledge, the first systematic controllable text-space optimizer for agent skills: a separate optimizer model turns scored rollouts into bounded add/delete/replace edits on a single skill document, and an edit is accepted only when it strictly improves a held-out validation score. A textual learning-rate budget, rejected-edit buffer, and epoch-wise slow/meta update make skill training stable while adding zero inference-time model calls at deployment. Across six benchmarks, seven target models, and three execution harnesses (direct chat, Codex, Claude Code), SkillOpt is best or tied on all 52 evaluated (model, benchmark, harness) cells and beats every per-cell competitor among human, one-shot LLM, Trace2Skill, TextGrad, GEPA, and EvoSkill skills. On GPT-5.5 it lifts the average no-skill accuracy by +23.5 points in direct chat, by +24.8 inside the Codex agentic loop, and by +19.1 inside Claude Code. Transfer experiments further show that optimized skill artifacts retain value when moved across model scales, between Codex and Claude Code execution environments, and to a nearby math benchmark without further optimization. Code: https://aka.ms/skillopt},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
+  file = {/Users/wenqiguo/Zotero/storage/NG4Y3T28/Yang et al. - 2026 - SkillOpt Executive Strategy for Self-Evolving Agent Skills.pdf;/Users/wenqiguo/Zotero/storage/TDTED5IH/2605.html}
 }
 
 @misc{ye_ipadapter_2023,

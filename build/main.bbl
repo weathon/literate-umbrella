@@ -1,25 +1,46 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{9}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Chen et~al.(2026)Chen, Lu, Liu, Dong, Zou, Lv, Li, Mao, Pei, Wang, Li, Sapra, Liu, Zheng, Huang, Wang, Yu, Tao, Liu, and Lu]{chen_multimodal_2026}
+\bibitem[_25()]{_251008191_}
+[2510.08191] {{Training-Free Group Relative Policy Optimization}}.
+\newblock https://arxiv.org/abs/2510.08191.
+
+\bibitem[Chen et~al.(2026{\natexlab{a}})Chen, Lu, Liu, Dong, Zou, Lv, Li, Mao, Pei, Wang, Li, Sapra, Liu, Zheng, Huang, Wang, Yu, Tao, Liu, and Lu]{chen_multimodal_2026}
 Guo Chen, Lidong Lu, Yicheng Liu, Liangrui Dong, Lidong Zou, Jixin Lv, Zhenquan Li, Xinyi Mao, Baoqi Pei, Shihao Wang, Zhiqi Li, Karan Sapra, Fuxiao Liu, Yin-Dong Zheng, Yifei Huang, Limin Wang, Zhiding Yu, Andrew Tao, Guilin Liu, and Tong Lu.
 \newblock Towards {{Multimodal Lifelong Understanding}}: {{A Dataset}} and {{Agentic Baseline}}.
-\newblock https://arxiv.org/abs/2603.05484v1, 2026.
+\newblock https://arxiv.org/abs/2603.05484v1, 2026{\natexlab{a}}.
+
+\bibitem[Chen et~al.(2026{\natexlab{b}})Chen, Zhong, Liu, and Du]{chen_skillcat_2026}
+Kunfeng Chen, Qihuang Zhong, Juhua Liu, and Bo Du.
+\newblock {{SkillCAT}}: {{Contrastive}}, {{Assessment-Augmented}} and {{Topology-AwareSkill Self-Evolution}} for {{LLM Agents}}.
+\newblock https://arxiv.org/abs/2606.13317v2, 2026{\natexlab{b}}.
 
 \bibitem[Li et~al.(2026)Li, Wu, Liu, Ding, Li, and Zhang]{li_bridging_2026}
 Jiazheng Li, Chi-Hao Wu, Yunze Liu, Kaize Ding, Jundong Li, and Chuxu Zhang.
 \newblock Bridging {{Modalities}}, {{Spanning Time}}: {{Structured Memory}} for {{Ultra-Long Agentic Video Reasoning}}, 2026.
 
+\bibitem[Ni et~al.(2026)Ni, Liu, Liu, Sun, Zhou, Cheng, Wang, Zhao, Jiang, and Jiang]{ni_trace2skill_2026}
+Jingwei Ni, Yihao Liu, Xinpeng Liu, Yutao Sun, Mengyu Zhou, Pengyu Cheng, Dexin Wang, Erchao Zhao, Xiaoxi Jiang, and Guanjun Jiang.
+\newblock {{Trace2Skill}}: {{Distill Trajectory-Local Lessons}} into {{Transferable Agent Skills}}, 2026.
+
+\bibitem[Shao et~al.(2024)Shao, Wang, Zhu, Xu, Song, Bi, Zhang, Zhang, Li, Wu, and Guo]{shao_deepseekmath_2024}
+Zhihong Shao, Peiyi Wang, Qihao Zhu, Runxin Xu, Junxiao Song, Xiao Bi, Haowei Zhang, Mingchuan Zhang, Y.~K. Li, Y. Wu, and Daya Guo.
+\newblock {{DeepSeekMath}}: {{Pushing}} the {{Limits}} of {{Mathematical Reasoning}} in {{Open Language Models}}, 2024.
+
 \bibitem[Tian et~al.(2025)Tian, Wang, Guo, Wu, Dong, Wang, Yang, Zhang, Zhu, and Liu]{tian_egor1_2025}
 Shulin Tian, Ruiqi Wang, Hongming Guo, Penghao Wu, Yuhao Dong, Xiuying Wang, Jingkang Yang, Hao Zhang, Hongyuan Zhu, and Ziwei Liu.
 \newblock Ego-{{R1}}: {{Chain-of-Tool-Thought}} for {{Ultra-Long Egocentric Video Reasoning}}, 2025.
 
-\bibitem[Yang et~al.(2026)Yang, Liu, Guo, Dong, Zhang, Zhang, Wang, Zhou, Xie, Wang, Ouyang, Lin, Cominelli, Cai, Zhang, Zhang, Hong, Widmer, Gringoli, Yang, Li, and Liu]{yang_egolife_2026}
+\bibitem[Yang et~al.(2026{\natexlab{a}})Yang, Liu, Guo, Dong, Zhang, Zhang, Wang, Zhou, Xie, Wang, Ouyang, Lin, Cominelli, Cai, Zhang, Zhang, Hong, Widmer, Gringoli, Yang, Li, and Liu]{yang_egolife_2026}
 Jingkang Yang, Shuai Liu, Hongming Guo, Yuhao Dong, Xiamengwei Zhang, Sicheng Zhang, Pengyun Wang, Zitang Zhou, Binzhu Xie, Ziyue Wang, Bei Ouyang, Zhengyu Lin, Marco Cominelli, Zhongang Cai, Yuanhan Zhang, Peiyuan Zhang, Fangzhou Hong, Joerg Widmer, Francesco Gringoli, Lei Yang, Bo Li, and Ziwei Liu.
-\newblock {{EgoLife}}: {{Towards Egocentric Life Assistant}}, 2026.
+\newblock {{EgoLife}}: {{Towards Egocentric Life Assistant}}, 2026{\natexlab{a}}.
+
+\bibitem[Yang et~al.(2026{\natexlab{b}})Yang, Gong, Huang, Yang, Zhou, Huang, Li, Gao, Dai, Liu, Qiu, Yang, Chen, Yang, and Luo]{yang_skillopt_2026}
+Yifan Yang, Ziyang Gong, Weiquan Huang, Qihao Yang, Ziwei Zhou, Zisu Huang, Yan Li, Xuemei Gao, Qi Dai, Bei Liu, Kai Qiu, Yuqing Yang, Dongdong Chen, Xue Yang, and Chong Luo.
+\newblock {{SkillOpt}}: {{Executive Strategy}} for {{Self-Evolving Agent Skills}}, 2026{\natexlab{b}}.
 
 \end{thebibliography}

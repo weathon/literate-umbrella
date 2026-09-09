@@ -3,7 +3,18 @@
 Ultra long video understanding (ULVU)
 
 \section{Related Works}
+\subsection{Ultra Long Video Understanding}
+\subsection{Skill Training} 
 
+Training model weights, especilly using reinforcement learning (RL) is expensive, slow, and not portable (you would need to host and run this specific model that might perfome poorly on general tasks). Many recent works began to train the Skill document of agent instead of the model weights, which could be seen as a form of prompt optimization. 
+
+Training-free GRPO \cite{_251008191_} used a similar apporch to original gradient based GRPO \cite{shao_deepseekmath_2024}. A initial experience and a policy model is used to rollout a batch of traces and another LLM is used to compute the semantic advantage of each rollout, anology to the numberitic advantage in original GRPO. These semantic advantages are used to update the experience. 
+
+Trace2Skill \cite{ni_trace2skill_2026} used parllel rollout in batches to collect many traces and generate patches for success and failed trace, these patches are then cascadingly merged to the final skill. Compared to training-free GRPO, this can be seen as a form of off line reinforcement learning. 
+
+SkillOpt \cite{yang_skillopt_2026} treats the skill optimization similar to gradient descent optimization, where editing budget is anlohy to learning rate, gradient direction is analogy to editing directio, etc. They also learn a meta skill to track what kind of edit is helpful using a held out validation set. 
+
+SkillCAT \cite{chen_skillcat_2026} used a DPO-style training. It samples two paired rollout: success one ($r^+$) and failed one ($r^-$). Then it analysis the two traces and find the point where they diverges and generate the patch contrastively. The patch is then verified if it actually helps the agent, similar to the gate in SkillOpt and merged if it overturn a failure into success or maintain a success. However, in many cases, the two traces are completely independent (no shared prefix beyond the prompt) or the diverge point does not impact the result.  
 
 \section{VideoSQL}
 \subsection{Index Building}
@@ -12,13 +23,16 @@ We used the same index sturcture as MAGIC-Video \cite{li_bridging_2026}, which i
 \subsection{Agentic SQL Queries}
 
 
+
 \subsection{Trainable Skills}
+
 
 
 \section{Evaluations}
 \subsection{Datasets}
 We used two most popular ULVU datasets in the paper: EgoLifeQA \cite{yang_egolife_2026} and MM-Lifelong \cite{chen_multimodal_2026}. EgoLifeQA uses multiple-choice questions (MCQ) while MM-Lifelong uses open QA. EgoLifeQA contains one week of recording in the same setting while MM-Lifelong has 3 different settings (day, week, and month) each with its own video. The MM-Lifelong week subset has the same video as EgoLifeQA. We argue that MCQ does not reflect realistic usage since most questions asked by users in real world are open. Additionally, agents can brute-force verify each option to artificially boost accuracy. We therefore reformulated EgoLifeQA into open QA questions (Open-EgoLifeQA) similar to MM-Lifelong and evaluated both using LLM-as-judge for semantic comparison between the ground-truth and predicted answers. To compare with prior work, we used the Jack view from EgoLifeQA. We evaluated our un-trained VideoSQL on both Open-EgoLifeQA and MM-Lifelong validation set. 
 
-To train the VideoSQL Skill, we need to select a independent training set. Ego-R1 Data \cite{tian_egor1_2025} is a training set build on top of EgoLifeQA and authors of Ego-R1 trained their method on this dataset and then tested on EgoLifeQA. MM-Lifelong also has a training split as well. However, these training sets overlap with their corresponding validation/testing sets at the video level. While no questions are leaked, we argue that sharing videos could still inflate performance, or at least fail to test the model's ability for cross-domain generalization. To address these, we trained out Skill on a mixture of MM-Lifelong day-long and week-long subset and EgoLifeQA and evaluated on the most challenging MM-Lifelong month-long subset.  
+To train the VideoSQL Skill, we need to select a independent training set. Ego-R1 Data \cite{tian_egor1_2025} is a training set build on top of EgoLifeQA and authors of Ego-R1 trained their method on this dataset and then tested on EgoLifeQA. MM-Lifelong also has a training split as well. However, these training sets overlap with their corresponding validation/testing sets at the video level. While no questions are leaked, we argue that sharing videos could still inflate performance, or at least fail to test the model's ability for cross-domain generalization. To address these, we trained out Skill on MM-Lifelong day-long and week-long subset and evaluated on the most challenging MM-Lifelong month-long subset.
+
 
 \subsection{Baselines}

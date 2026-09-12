@@ -1,0 +1,19 @@
+\section{Related Work}
+\label{sec:related}
+
+\subsection{Long- and Ultra-Long Video Understanding}
+\label{sec:related-long-video}
+
+
+\subsection{SQL-based RAG}
+\label{sec:related-sql-rag}
+
+Relational databases have long been the default for storing structured data. Recent work starts applying them to agentic RAG and agent memory. SAG \cite{wu_sag_2026} argues that naive RAG yields shallow retrieval, while graph-based RAG is slow, costly, and hard to update. They therefore use SQL as the backbone of RAG. Documents are stored as an event-entity incidence table. At query time, an LLM extracts entities from the query, and a JOIN retrieves events sharing these entities as seeds. A reverse JOIN then collects the entities attached to these seed events, and a further JOIN brings in previously unseen events incident to them. The expanded event set is passed back to the LLM, which selects the evidence and maps it to the original chunks. There are also other works that frame agent memories as databases like \cite{orogat_agent_2026}.
+% need more
+
+\subsection{Skill Training}
+\label{sec:related-skill-training}
+
+Training model weights, especially with reinforcement learning (RL), is expensive, slow, and not portable (you would need to host and run this specific model, which might perform poorly on general tasks). Many recent works began to train the agent's Skill document instead of model weights, which can be seen as a form of prompt optimization.
+
+\textbf{Training-free GRPO}~\cite{_251008191_} uses an approach similar to the original gradient-based GRPO~\cite{shao_deepseekmath_2024}. An initial experience and a policy model are used to roll out a batch of traces, and another LLM computes the semantic advantage of each rollout, analogous to the numeric advantage in the original GRPO. These semantic advantages are used to update the experience. \textbf{Trace2Skill}~\cite{ni_trace2skill_2026} uses parallel rollouts in batches to collect many traces and generate patches for successful and failed traces. These patches are then merged into the final Skill in sequence. Compared to training-free GRPO, this can be seen as a form of offline reinforcement learning. \textbf{SkillOpt}~\cite{yang_skillopt_2026} treats Skill optimization similarly to gradient descent, where the editing budget is analogous to the learning rate, the gradient direction is analogous to the editing direction, etc. It also learns a meta-skill to track what kind of edit is helpful using a held-out validation set. \textbf{SkillCAT}~\cite{chen_skillcat_2026} uses DPO-style training. It samples two paired rollouts: a successful one ($r^+$) and a failed one ($r^-$). It then analyzes the two traces, finds the point where they diverge, and generates a patch contrastively. The patch is then verified to see whether it helps the agent, similar to the gate in SkillOpt, and is merged if it turns a failure into a success or maintains a success. However, in many cases, the two traces are completely independent (with no shared prefix beyond the prompt), or the divergence point does not affect the result.

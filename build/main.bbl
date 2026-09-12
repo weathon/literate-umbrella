@@ -1,4 +1,4 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{13}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -19,13 +19,13 @@ Kunfeng Chen, Qihuang Zhong, Juhua Liu, and Bo Du.
 \newblock {{SkillCAT}}: {{Contrastive}}, {{Assessment-Augmented}} and {{Topology-AwareSkill Self-Evolution}} for {{LLM Agents}}.
 \newblock https://arxiv.org/abs/2606.13317v2, 2026{\natexlab{b}}.
 
-\bibitem[Gong et~al.(2026)Gong, Kang, Yan, Chen, Zheng, Zhang, Zhuge, Ruan, Lu, and Huang]{gong_grove_2026}
-Sitong Gong, Caixin Kang, Tianyu Yan, Guo Chen, Bo Zheng, Kaipeng Zhang, Yunzhi Zhuge, Xiang Ruan, Huchuan Lu, and Yifei Huang.
-\newblock {{GROVE}}: {{Growing}} and {{Reasoning}} over {{Temporally Stratified Memory}} from {{Streaming Video Experience}}, 2026.
-
-\bibitem[Li et~al.(2026)Li, Wu, Liu, Ding, Li, and Zhang]{li_bridging_2026}
+\bibitem[Li et~al.(2026{\natexlab{a}})Li, Wu, Liu, Ding, Li, and Zhang]{li_bridging_2026}
 Jiazheng Li, Chi-Hao Wu, Yunze Liu, Kaize Ding, Jundong Li, and Chuxu Zhang.
-\newblock Bridging {{Modalities}}, {{Spanning Time}}: {{Structured Memory}} for {{Ultra-Long Agentic Video Reasoning}}, 2026.
+\newblock Bridging {{Modalities}}, {{Spanning Time}}: {{Structured Memory}} for {{Ultra-Long Agentic Video Reasoning}}, 2026{\natexlab{a}}.
+
+\bibitem[Li et~al.(2026{\natexlab{b}})Li, Zhang, Long, Chen, Song, Bai, Yang, Xie, Yang, Liu, Zhou, and Lin]{li_qwen3vlembedding_2026}
+Mingxin Li, Yanzhao Zhang, Dingkun Long, Keqin Chen, Sibo Song, Shuai Bai, Zhibo Yang, Pengjun Xie, An Yang, Dayiheng Liu, Jingren Zhou, and Junyang Lin.
+\newblock Qwen3-{{VL-Embedding}} and {{Qwen3-VL-Reranker}}: {{A Unified Framework}} for {{State-of-the-Art Multimodal Retrieval}} and {{Ranking}}, 2026{\natexlab{b}}.
 
 \bibitem[Ni et~al.(2026)Ni, Liu, Liu, Sun, Zhou, Cheng, Wang, Zhao, Jiang, and Jiang]{ni_trace2skill_2026}
 Jingwei Ni, Yihao Liu, Xinpeng Liu, Yutao Sun, Mengyu Zhou, Pengyu Cheng, Dexin Wang, Erchao Zhao, Xiaoxi Jiang, and Guanjun Jiang.
@@ -34,6 +34,10 @@ Jingwei Ni, Yihao Liu, Xinpeng Liu, Yutao Sun, Mengyu Zhou, Pengyu Cheng, Dexin 
 \bibitem[Orogat and Mansour(2026)]{orogat_agent_2026}
 Abdelghny Orogat and Essam Mansour.
 \newblock Is {{Agent Memory}} a {{Database}}? {{Rethinking Data Foundations}} for {{Long-Term AI Agent Memory}}, 2026.
+
+\bibitem[{Qwen Team}(2026)]{qwen38}
+{Qwen Team}.
+\newblock Qwen3.8-{{Max}}: A new bar for coding and cowork, 2026.
 
 \bibitem[Shao et~al.(2024)Shao, Wang, Zhu, Xu, Song, Bi, Zhang, Zhang, Li, Wu, and Guo]{shao_deepseekmath_2024}
 Zhihong Shao, Peiyi Wang, Qihao Zhu, Runxin Xu, Junxiao Song, Xiao Bi, Haowei Zhang, Mingchuan Zhang, Y.~K. Li, Y. Wu, and Daya Guo.

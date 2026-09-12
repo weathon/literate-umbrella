@@ -47,4 +47,5 @@ To train the VideoSQL Skill, we need to select an independent training set. Ego-
 
 
 \subsection{Baselines}
-We selected two baselines for the training-free harness, MAGIC-Video \cite{li_bridging_2026} and GROVE \cite{gong_grove_2026}, all using GPT-5.6-luna as the policy model. These will be used to compare with our harness with untrained skills. We also selected Trace2Skill \cite{ni_trace2skill_2026} and SkillOpt \cite{yang_skillopt_2026} for our skill training methods, both built on top of the same VideoSQL harness. 
+We re-ran the MAGIC-Video \cite{li_bridging_2026} as our training-free baseline as we share the same indices. Both MAGIC-Video and our method used Qwen-3.8-27B~\cite{qwen38} as the policy model and Qwen3-VL-Embedding-8B \cite{li_qwen3vlembedding_2026} as embedding model. We also compared with a couple other baselines directly with their reported numbers. We also selected Trace2Skill \cite{ni_trace2skill_2026} and SkillOpt \cite{yang_skillopt_2026} for our skill-trained variant, both built on top of the same VideoSQL harness. 
+

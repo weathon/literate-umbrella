@@ -1,4 +1,4 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{10}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -31,10 +31,6 @@ Jiazheng Li, Chi-Hao Wu, Yunze Liu, Kaize Ding, Jundong Li, and Chuxu Zhang.
 Jingwei Ni, Yihao Liu, Xinpeng Liu, Yutao Sun, Mengyu Zhou, Pengyu Cheng, Dexin Wang, Erchao Zhao, Xiaoxi Jiang, and Guanjun Jiang.
 \newblock {{Trace2Skill}}: {{Distill Trajectory-Local Lessons}} into {{Transferable Agent Skills}}, 2026.
 
-\bibitem[Orogat and Mansour(2026)]{orogat_agent_2026}
-Abdelghny Orogat and Essam Mansour.
-\newblock Is {{Agent Memory}} a {{Database}}? {{Rethinking Data Foundations}} for {{Long-Term AI Agent Memory}}, 2026.
-
 \bibitem[Shao et~al.(2024)Shao, Wang, Zhu, Xu, Song, Bi, Zhang, Zhang, Li, Wu, and Guo]{shao_deepseekmath_2024}
 Zhihong Shao, Peiyi Wang, Qihao Zhu, Runxin Xu, Junxiao Song, Xiao Bi, Haowei Zhang, Mingchuan Zhang, Y.~K. Li, Y. Wu, and Daya Guo.
 \newblock {{DeepSeekMath}}: {{Pushing}} the {{Limits}} of {{Mathematical Reasoning}} in {{Open Language Models}}, 2024.
@@ -42,10 +38,6 @@ Zhihong Shao, Peiyi Wang, Qihao Zhu, Runxin Xu, Junxiao Song, Xiao Bi, Haowei Zh
 \bibitem[Tian et~al.(2025)Tian, Wang, Guo, Wu, Dong, Wang, Yang, Zhang, Zhu, and Liu]{tian_egor1_2025}
 Shulin Tian, Ruiqi Wang, Hongming Guo, Penghao Wu, Yuhao Dong, Xiuying Wang, Jingkang Yang, Hao Zhang, Hongyuan Zhu, and Ziwei Liu.
 \newblock Ego-{{R1}}: {{Chain-of-Tool-Thought}} for {{Ultra-Long Egocentric Video Reasoning}}, 2025.
-
-\bibitem[Wu et~al.(2026)Wu, Li, Liang, Chen, Liang, Mo, and Li]{wu_sag_2026}
-Yuchao Wu, Junqin Li, Xingcheng Liang, Yongjie Chen, Yinghao Liang, Linyuan Mo, and Guanxian Li.
-\newblock {{SAG}}: {{SQL-Retrieval Augmented Generation}} with {{Query-Time Dynamic Hyperedges}}, 2026.
 
 \bibitem[Yang et~al.(2026{\natexlab{a}})Yang, Liu, Guo, Dong, Zhang, Zhang, Wang, Zhou, Xie, Wang, Ouyang, Lin, Cominelli, Cai, Zhang, Zhang, Hong, Widmer, Gringoli, Yang, Li, and Liu]{yang_egolife_2026}
 Jingkang Yang, Shuai Liu, Hongming Guo, Yuhao Dong, Xiamengwei Zhang, Sicheng Zhang, Pengyun Wang, Zitang Zhou, Binzhu Xie, Ziyue Wang, Bei Ouyang, Zhengyu Lin, Marco Cominelli, Zhongang Cai, Yuanhan Zhang, Peiyuan Zhang, Fangzhou Hong, Joerg Widmer, Francesco Gringoli, Lei Yang, Bo Li, and Ziwei Liu.
